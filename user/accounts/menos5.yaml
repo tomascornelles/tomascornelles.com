@@ -1,0 +1,21 @@
+email: menos5@gmail.com
+fullname: 'Tomas Cornelles'
+title: Developer
+state: enabled
+access:
+  admin:
+    super: 'true'
+    login: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$QrLqp1OT4i7I4UrE.kLLh.TupZ8vcVy9FoZEzIEMwSVdK45Eo3y..
+language: en
+login_attempts: {  }
+twofa_secret: HHEFRQKENA32WHESFVBEQAMOSTTS2RJK
+twofa_enabled: false
+avatar:
+  user/accounts/avatars/qhirms3YvJ0HD8O.svg:
+    name: qhirms3YvJ0HD8O.svg
+    type: image/svg+xml
+    size: 929
+    path: user/accounts/avatars/qhirms3YvJ0HD8O.svg

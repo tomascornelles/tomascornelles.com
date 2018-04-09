@@ -1,0 +1,20 @@
+title: TomasCornelles
+default_lang: es
+author:
+  name: 'Tomás Cornelles'
+  email: tomascornelles@gmail.com
+taxonomies:
+  - tag
+  - type
+  - tech
+  - client
+  - year
+metadata:
+  description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

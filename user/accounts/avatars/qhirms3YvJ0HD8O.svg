@@ -1,0 +1,20 @@
+<svg width="423" height="423" viewBox="0 0 423 423" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icono</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(3 0 0 3 -225 105)">
+<g id="icono">
+<g id="amarillo" opacity="0.98">
+<use xlink:href="#path0_fill" transform="translate(75.0448 -34.4472)" fill="#FFE455"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(75.038 -34.4547)" fill="#333333"/>
+<use xlink:href="#path2_fill" transform="translate(75.038 -34.4547)" fill="#333333"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 140.294 0L 0 0L 0 140.294L 140.294 140.294L 140.294 0Z"/>
+<path id="path1_fill" d="M 23.3867 140.305L 0 140.301L 46.7656 0.00390625L 70.1562 0.00390625L 23.3867 140.305Z"/>
+<path id="path2_fill" d="M 70.1523 140.301L 46.7617 140.301L 93.5312 0L 116.883 0.00390625L 70.1523 140.301Z"/>
+</defs>
+</svg>
