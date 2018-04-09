@@ -1,0 +1,11 @@
+{% set blog_image = page.media.images|first.cropZoom(300,300) %}
+
+<a href="{{page.url}}" class="work work-item">
+    <amp-img src="{{blog_image.url}}" alt="{{ page.title }}" layout="responsive" width="1" height="1"></amp-img>
+    <div class="caja-texto">
+        <h2>{{ page.title }}</h2>
+        <div class="resumen">
+        {{page.summary(100)}}
+        </div>
+    </div>
+</a>

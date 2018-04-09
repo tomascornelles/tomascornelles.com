@@ -1,0 +1,62 @@
+[class^="tc-"], [class*=" tc-"] {
+  font-family: 'tc2018';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tc-logo:before {
+  content: "\e900";
+}
+.tc-envelope-o:before {
+  content: "\f003";
+}
+.tc-close:before {
+  content: "\f00d";
+}
+.tc-remove:before {
+  content: "\f00d";
+}
+.tc-times:before {
+  content: "\f00d";
+}
+.tc-left:before {
+  content: "\f053";
+}
+.tc-right:before {
+  content: "\f054";
+}
+.tc-up:before {
+  content: "\f077";
+}
+.tc-down:before {
+  content: "\f078";
+}
+.tc-twitter:before {
+  content: "\f099";
+}
+.tc-facebook:before {
+  content: "\f09a";
+}
+.tc-menu:before {
+  content: "\f0c9";
+}
+.tc-google-plus:before {
+  content: "\f0d5";
+}
+.tc-linkedin:before {
+  content: "\f0e1";
+}
+.tc-spinner:before {
+  content: "\f110";
+}
+.tc-bicycle:before {
+  content: "\f206";
+}

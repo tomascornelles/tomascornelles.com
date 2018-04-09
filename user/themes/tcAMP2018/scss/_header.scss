@@ -1,0 +1,139 @@
+header {
+  position: relative;
+  .fondo-fijo{
+    z-index: 100;
+    position: fixed;
+    height: 8em;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $cColor;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+  }
+  .contenido-fijo {
+    z-index: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .scroll {
+    height: 20vw;
+    min-height: 10em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    z-index: 200;
+    background: $cColor;
+    background-size: cover;
+    overflow: hidden;
+  }
+  a {
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  a:hover {
+    background: none;
+  }
+  .logo-svg {
+    float: left;
+    svg {
+      height: 4em;
+      width: 7.2em;
+      margin: 1em 0em;
+    }
+    h1 {
+      text-align: left;
+      font-size: 1.4em;
+      line-height: 1;
+      margin-left: 0;
+      padding-left: 2.85em;
+      margin-top: -0.9em;
+    }
+  }
+  .menu-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    float: right;
+    color: #000;
+    font-size: 3em;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin: 0;
+    padding: .5rem 0 1.5rem 3.5rem;
+    z-index: 999;
+    height: 4rem;
+  }
+}
+
+amp-sidebar {
+  background: $cColor;
+  -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+  width: 70%;
+  max-width: 600px;
+}
+.menu {
+  a {
+    display: block;
+    color: $cNegro;
+    padding: 0.02em;
+    line-height: 1;
+    margin: 0.8em 0 0.8em 2em;
+    font-size: 2em;
+    height: auto;
+    text-align: right;
+    font-family: $font2;
+    padding-right: 1.5em;
+
+    &:hover {
+      background: initial;
+      color: initial;
+    }
+    
+    &.active {
+      border-right: 1em solid $cNegro;
+      padding-right: 0.5em;
+    }
+  }
+
+  .menu-toggle {
+    position: relative;
+    color: #000;
+    font-size: 3em;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin: 0;
+    padding: .5rem 0;
+  }
+
+  &.open {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu {
+    &.open{
+      width: 30%;
+    }
+
+    a {
+      font-size: 3em;
+    }
+  }
+  header {
+    .logo-svg {
+      svg {
+        margin: 1em 0;
+      }
+    }
+  }
+}

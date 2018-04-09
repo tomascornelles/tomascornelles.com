@@ -1,0 +1,40 @@
+<form name="contact" 
+      action="//tomascornelles.com{{home_url}}/mail" 
+      method="GET"  
+      target="_top"
+      id="contact" 
+      novalidate=""
+      on="submit-success:AMP.setState({response:'success'})">
+  <div class="formulario" [class]="'formulario ' + response">
+    <div class="form-field">
+      <div class="form-label">
+        <label class="inline" for="name"> Nombre </label>
+      </div>
+      <div class="form-data " data-grav-field="text" data-grav-disabled="true" data-grav-default="null">
+        <div class="form-input-wrapper  ">
+          <input name="name" id="name" value="" class="user-valid valid" placeholder="Dime tu nombre" autocomplete="on" type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <div class="form-label"> 
+        <label class="inline" for="message"> Mensaje <span class="required">*</span> </label>
+      </div>
+      <div class="form-data " data-grav-field="textarea" data-grav-disabled="true" data-grav-default="null">
+        <div class="form-textarea-wrapper  ">
+          <textarea name="message" id="message" class=" " placeholder="Déjame un mensaje" required="required"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="buttons">
+      <button class="boton" type="submit"> Enviar <span class="tc-right"></span> </button>
+    </div>
+  </div>
+
+  <input name="__form-name__" value="{{base_url}}/contact" type="hidden">
+  <input name="__unique_form_id__" value="MJxpCY5nKLFvuqbmAINh" type="hidden">  <input name="form-nonce" value="b083ff8d7623dbb9fd2828b09531602a" type="hidden">
+  <input type="hidden" name="url" value="{{page.url}}">
+</form>

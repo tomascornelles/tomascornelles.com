@@ -1,0 +1,62 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<div class="main">
+  <section class="work container-c">
+
+    <nav class="breadcrum">
+      <a href="{{page.parent.url}}">Volver al {{page.parent.title}} </a>
+    </nav>
+
+    <h1>{{ page.title }}</h1>
+
+    {% if (page.taxonomy.client or page.taxonomy.year or page.taxonomy.type or page.taxonomy.tech) %}
+    <ul class="data">
+      {% if page.taxonomy.client %}
+        <li>Cliente: {% for client in page.taxonomy.client %} 
+          <a href="{{ home_url|rtrim('/') }}/porfolio/client{{ config.system.param_sep }}{{ client }}">{{ client }}</a> 
+        {% endfor %}</li>
+      {% endif %}
+      {% if page.taxonomy.year %}<li>Año: 
+        {% for year in page.taxonomy.year %} 
+          <a href="{{ home_url|rtrim('/') }}/porfolio/year{{ config.system.param_sep }}{{ year }}">{{ year }}</a> 
+        {% endfor %}</li>
+      {% endif %}
+      {% if page.taxonomy.type %}<li>Tipo: 
+        {% for type in page.taxonomy.type %} 
+          <a href="{{ home_url|rtrim('/') }}/porfolio/type{{ config.system.param_sep }}{{ type }}">{{ type }}</a> 
+        {% endfor %}</li>
+      {% endif %}
+      {% if page.taxonomy.tech %}<li>Tecnología: 
+        {% for tech in page.taxonomy.tech %} 
+          <a href="{{ home_url|rtrim('/') }}/porfolio/tech{{ config.system.param_sep }}{{ tech }}">{{ tech }}</a> 
+        {% endfor %}</li>
+      {% endif %}
+    </ul>
+    {% endif %}
+    
+    {% if page.taxonomy.tipo %}
+    <span class="tipos">
+        {% for tipo in page.taxonomy.tipo %}
+        
+        
+        
+        
+        {% endfor %}
+    </span>
+    {% endif %}
+
+    <article>
+      {{ page.content }}
+    </article>
+    <div class="social">
+      <h4>Compártelo</h4>
+      <p>
+        <a href="http://twitter.com/share?text={{ page.title }}, Compártelo por favor: &url={{page.url(true)}}" class="twitter"><em class="tc-twitter"></em>Twitter</a>
+        <a href="http://www.facebook.com/sharer.php?u={{page.url(true)}}" class="facebook"><em class="tc-facebook"></em>Facebook</i></a>
+        <a href="https://plus.google.com/share?url={{page.url(true)}}" class="googleplus"><em class="tc-google-plus"></em>Google+</a>
+        <a href="http://www.linkedin.com/shareArticle?url={{page.url(true)}}" class="linkedin"><em class="tc-linkedin"></em>Linkedin</a>
+      </p>
+    </div>
+  </section>
+</div>
+{% endblock %}

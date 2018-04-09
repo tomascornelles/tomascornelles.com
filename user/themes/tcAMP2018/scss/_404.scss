@@ -1,0 +1,225 @@
+.page404 {
+  text-align: center;
+  h1 {
+    font-size: 4em;
+    margin-top: 0;
+  }
+  .frase {
+    font-size: 2.2em;
+    margin-bottom: 0;
+  }
+  .card {
+    display: inline-block;
+    font-size: 10vw;
+    padding: 4vw;
+    margin: 1vw;
+    background: $cNegro;
+    color: $cColor;
+    border-radius: 1vw;
+    box-shadow: 1vw 1vw 2vw rgba(0,0,0,.5), inset 0px 0px 0px 1vw $cBlanco;
+    border: 1px solid $cGris;    
+    position: absolute;
+    height: 10vw;
+    overflow: hidden;
+    left: 50%;
+    margin-left: -7vw;
+
+    &.card2 {
+      color: $cNegro;
+      background: $cColor;
+    }
+    &.l {
+      left: 0;
+      margin-left: 0;
+    }
+    &.r {
+      right: 0;
+      left: auto;
+      margin-left: 0;
+    }
+
+    &:before {
+      content: '';
+      background-color:silver;
+      background-image: 
+      radial-gradient(circle at 100% 150%, silver 24%, $cColor 25%, $cColor 28%, silver 29%, silver 36%, $cColor 36%, $cColor 40%, transparent 40%, transparent),
+      radial-gradient(circle at 0    150%, silver 24%, $cColor 25%, $cColor 28%, silver 29%, silver 36%, $cColor 36%, $cColor 40%, transparent 40%, transparent),
+      radial-gradient(circle at 50%  100%, $cColor 10%, silver 11%, silver 23%, $cColor 24%, $cColor 30%, silver 31%, silver 43%, $cColor 44%, $cColor 50%, silver 51%, silver 63%, $cColor 64%, $cColor 71%, transparent 71%, transparent),
+      radial-gradient(circle at 100% 50%, $cColor 5%, silver 6%, silver 15%, $cColor 16%, $cColor 20%, silver 21%, silver 30%, $cColor 31%, $cColor 35%, silver 36%, silver 45%, $cColor 46%, $cColor 49%, transparent 50%, transparent),
+      radial-gradient(circle at 0    50%, $cColor 5%, silver 6%, silver 15%, $cColor 16%, $cColor 20%, silver 21%, silver 30%, $cColor 31%, $cColor 35%, silver 36%, silver 45%, $cColor 46%, $cColor 49%, transparent 50%, transparent);
+      background-size:100px 50px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin: -4vw;
+      border-radius: 1vw;
+      box-shadow: inset 0px 0px 0px 1vw $cBlanco;
+      display: none;
+    }
+    &.inicio {
+        animation-duration: 3s;
+        animation-name: initial1;
+      &:before {
+        display: block;
+          animation-duration: 3s;
+          animation-name: initial2;
+      }
+    }
+    &.reves{
+        animation-duration: 3s;
+        animation-name: flip;
+      &:before {
+        display: block;
+      }
+    }
+    &.muestra {
+        animation-duration: 1s;
+        animation-name: muestra1;
+      &:before {
+        display: none;
+        animation-duration: 1s;
+        animation-name: muestra2;
+      }
+    }
+    &.active {
+      transform: scale(1.2);
+      z-index: 100;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .tablero {
+    position: relative;
+    height: 30vw;
+    margin: 0 5em;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20vw;
+    padding-bottom: 5vw;
+    background: transparent;
+    border: 0;
+    &.hide {
+      display: none;
+    }
+  }
+  .overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20vw;
+    padding-bottom: 5vw;
+    display: none;
+    background: transparent;
+    border: 0;
+    &.visible {
+      display: block;
+    }
+  }
+  .card0 {
+    background: $cColor;
+    font-weight: 700;
+  }
+  .reiniciar {
+    border: 1px solid $cNegro;
+    background: $cColor;
+    cursor: pointer;
+  }
+  .menu_alt {
+    height: 0;
+    transition: all .5s ease;
+    margin-bottom: 5em;
+    overflow: hidden;
+    a {
+      color: $cNegro;
+      font-size: 3em;
+      display: inline-block;
+      padding: 0.3em .5em;
+      font-family: $font2;
+    }
+    &.visible {
+      height: auto;
+      animation-duration: 1s;
+      animation-name: muestra_menu;
+    }
+  }
+}
+@keyframes initial1 {
+  from {
+    transform: scaleX(1)
+  }
+  50% {
+    transform: scaleX(1)
+  }
+  75% {
+    transform: scaleX(0)
+  }
+  to {
+    transform: scaleX(1)
+  }
+}
+@keyframes initial2 {
+  from {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  75% {
+    transform: scaleX(0)
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes flip {
+  from {
+    transform: scaleX(1)
+  }
+  50% {
+    left: 50%;
+    margin-left: -7vw;
+    right: auto;
+    transform: scale(1.2)
+  }
+  to {
+    transform: scaleX(1)
+  }
+}
+@keyframes muestra1 {
+  from {
+    transform: scaleX(1)
+  }
+  5% {
+    transform: scaleX(0)
+  }
+  to {
+    transform: scaleX(1)
+  }
+}
+@keyframes muestra2 {
+  from {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1)
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes muestra_menu {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,39 @@
+footer {
+  overflow: hidden;
+  background: $cColor;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  padding-top: 3em;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  padding: 3em 0 1em;
+  font-family: $font2;
+  .left {
+    float: left;
+    font-size: 1.5em;
+    line-height: 3rem;
+  }
+  .right {
+    float: right;
+    line-height: 3rem;
+  }
+  a {
+    font-size: 2em;
+    display: inline-block;
+    padding: 0.3em;
+    overflow: hidden;
+    width: 1em;
+    color: transparent;
+
+    span {
+      color: $cNegro;
+    }
+
+    &:hover {
+      color: transparent;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+{% set msg = grav.uri.params("msg", true) %}
+<div class="main">
+  <section class="container-form">
+    {{ content|raw }}
+    {% if msg == 'ok' %}
+      <div class="mensaje">
+        Muchas gracias por el mensaje, espero darte una respuesta muy pronto.
+      </div>
+
+    {% elseif msg == 'ko' %}
+      <div class="mensaje">
+        Oops! Algo ha ocurrido, vuelve a intentarlo en breve por favor.
+      </div>
+
+    {% else %}
+      {% include 'partials/form_contacto.html.twig' %}
+    
+    {% endif %}
+  </section>
+</div>
+{% endblock %}
+

@@ -1,0 +1,82 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<div class="main home">
+  <div class="scroll">
+    <div class="logo-svg">
+      {% include 'partials/logo.html.twig' %}
+      <h1>Frontend developer <br>en Barcelona</h1>
+    </div>
+  </div>
+  <h1 class="title"></h1>
+  <section class="works">
+    <div class="container-i">
+        {% for page in page.find('/porfolio').children.order('date', 'desc').slice(0, 12) %}
+          {% include 'partials/work_item.html.twig' with {'page':page, 'truncate':true} %}
+        {% endfor %}
+    </div>
+    <div class="container-i">
+      <p>
+        <a href="{{home_url}}/porfolio" class="boton">Ver el porfolio completo <span class="tc-right"></span></a>
+      </p>
+    </div>
+  </section>
+
+  <section class="presentation">
+    <div class="container-i">
+      {{ page.content }}
+      <div><a href="{{home_url}}/CV_TomasCornelles.pdf" class="boton">Descarga mi CV <span class="tc-down"></span></a></div>
+    </div>
+  </section>
+
+  <section class="container-i">
+    <h2>Algunas empresas para las que he trabajado</h2>
+    <div class="logos">
+      {% for logo in page.header.logos %}
+        <div class="logo">
+          {% set image_parts = pathinfo(logo.image) %}
+          {% set image_basename = image_parts.basename %}
+          {% set image_page = image_parts.dirname == '.' ? page : page.find(image_parts.dirname) %}
+  
+          {% if logo.url %}
+            <a href="{{logo.url}}"><amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.name}}"></a>
+          {% else %}
+            <amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.name}}">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+  <section class="recent-posts">
+    <div class="container-i">
+        {% for p in page.find('/blog').children.order('date', 'desc').slice(0, 1) %}
+            {% set blog_image = p.media.images|first.cropZoom(1200,600) %}
+            <a href="{{ p.url }}" class="post post-item">
+                <amp-img src="{{ blog_image.url }}" alt="{{ p.title }}" layout="responsive" width="1200" height="600"></amp-img>
+                <div class="caja-texto">
+                    <h2>{{ p.title }}</h2><br>
+                    <time datetime="{{ p.date|date("c") }}">
+                        <span>{{ p.date|date("d") }} <strong>/</strong> {{ p.date|date("m") }} <strong>/</strong> {{ p.date|date("Y") }}</span>
+                    </time>
+                    <div class="summary">
+                      {{p.summary(400)}}
+                      <p><span class="button">Seguir Leyendo</span></p>
+                    </div>
+                </div>
+            </a>
+  
+        {% endfor %}
+    </div>
+    <div class="container-i">
+      <p>
+        <a href="{{home_url}}/blog" class="boton inverso">Visita mi blog <span class="tc-right"></span></a>
+      </p>
+    </div>
+  </section>
+ <section class="container-form">
+  <h2>Contáctame</h2>
+  <p>Y si quieres que te contacte no olvides dejarme un email o Twitter. Los datos que se envían solo se usarán para gestionr la respuesta.</p>      
+  {% include 'partials/form_contacto.html.twig' %}
+ </section>
+</div>
+{% endblock %}

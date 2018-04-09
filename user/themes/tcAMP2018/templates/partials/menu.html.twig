@@ -1,0 +1,4 @@
+<a href="{{ home_url }}" {% if page.slug == "home" or page.parent.slug == "home" %} class="active" {% endif %}>INICIO</a>
+<a href="{{ base_url }}/porfolio" {% if page.slug == "porfolio" or page.parent.slug == "porfolio" %} class="active" {% endif %}>PORFOLIO</a>
+<a href="{{ base_url }}/blog" {% if page.slug == "blog" or page.parent.slug == "blog" %} class="active" {% endif %}>BLOG</a>
+<a href="{{ base_url }}/contacto" {% if page.slug == "contacto" %} class="active" {% endif %}>CONTACTO</a>

@@ -1,0 +1,34 @@
+{% set blog_image = page.media.images|first.cropZoom(1400,700) %}
+{% if header.seo_description %}
+  {% set description = header.seo_description|striptags %}
+{% else %}
+  {% set description = page.summary(100)|striptags %}
+{% endif %}
+<!-- {{header.seo_description}} -->
+<meta name="description" content="{{description}}"/>
+<meta name="robots" content="index follow">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tomascornelles" />
+<meta name="twitter:creator" content="@tomascornelles" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.title|e('html') }}" />
+<meta property="og:url" content="{{page.url(true)}}" />
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:description" content="{{description}}" />
+<meta property="og:image" content="{{base_url_absolute}}/..{{blog_image.url}}" />
+
+<link rel="canonical" href="{{page.url}}" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "{{page.title}}",
+    "datePublished": "{{page.date|date("c")}}",
+    "dateModified": "{{page.date|date("c")}}",
+    "image": [
+      "{{base_url_absolute}}/..{{blog_image.url}}"
+    ]
+  }
+</script>

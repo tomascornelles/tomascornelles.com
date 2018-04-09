@@ -1,0 +1,28 @@
+title: Post Content
+@extends: 
+  type: default
+  context: blueprints://pages 
+
+form:
+  fields:
+  
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          
+          fields:
+            header.color:
+              type: colorpicker
+              label: Page highlight color
+              default: '#FFE455'
+            header.logoColor:
+              type: toggle
+              label: Logo color
+              default: 'black'
+              options:
+                'black': Black
+                'white': White

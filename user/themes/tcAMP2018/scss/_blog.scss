@@ -1,0 +1,57 @@
+
+a.post-item {
+  position: relative;
+  display: block;
+  background-color: lighten($cGris, 20%);
+  height: 0;
+  padding-bottom: 50%;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  
+  .caja-texto {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin-right: 5%;
+    h2 {
+      color: $cNegro;
+      background: $cColor;
+      font-size: 2.1em;
+      padding: .2rem .7rem;
+      margin-bottom: .1em;
+      display: inline-block;
+    }
+
+    time {
+      color: $cColor;
+      background: $cNegro;
+      padding: .2em 0.7rem;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1;
+      display: inline-block;
+
+      em {
+        font-style: normal;
+      }
+    }
+  }
+  
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 99;
+    box-shadow: 0 0 .5em rgba(0,0,0,.8)
+  }
+}
+
+@media screen and (min-width: 600px) {
+  a.post-item {
+    .caja-texto {
+      h2 {
+        font-size: 2.4em;
+      }
+    }
+  }
+}

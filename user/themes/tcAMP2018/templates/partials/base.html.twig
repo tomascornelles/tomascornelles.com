@@ -1,0 +1,142 @@
+{% spaceless %}
+{% set titulo = false %}
+{% if page.slug == "porfolio" or page.slug == "blog" or page.slug == "contacto" %}
+{% set titulo = true %}
+{% endif %}
+{% endspaceless %}
+
+
+<!doctype html>
+<html amp lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/seo.html.twig' %}
+
+    {% if favicon %}
+    <link rel="icon" type="image/png" href="{{ url('theme://images/' ~ favicon) }}" />
+    {% endif %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+    {% if page.slug == 'home' or page.slug == 'contacto' %}
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    {% endif %}
+    {% if page.slug == 'home' or page.slug == 'contacto' or page.slug == '404' %}
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    {% endif %}
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    {% include 'partials/head.html.twig' with {page_type: page.template()} %}
+
+  </head>
+  <body>
+
+    <header>
+      <div class="fondo-fijo"></div>
+      <div class="contenido-fijo">
+        <div class="container-i">
+          <div class="logo-svg">
+            <a href="{{ home_url }}">
+              {% include 'partials/logo.html.twig' %}
+            </a>
+            {% if titulo %}<h1>{{page.title}}</h1>{% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="scroll">
+        <div class="sobre-scroll"></div>
+      </div>
+          <a class="menu-toggle js-menu-toggle" on="tap:sidebar.open">
+            <span class="tc-menu"></span>
+          </a>
+    </header>
+
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+      <nav class="menu">
+        <a class="menu-toggle js-menu-toggle" on="tap:sidebar.close">
+          <span class="tc-close"></span>
+        </a>
+        {% include 'partials/menu.html.twig' %}
+      </nav>
+    </amp-sidebar>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      <div class="container-i">
+        <div class="left">&copy; 2018 Tomás Cornelles</div>
+        <div class="right"><a href="https://twitter.com/tomascornelles"><span class="tc-twitter"></span>Twitter</a>
+          <a href="https://www.linkedin.com/in/tomascornelles"><span class="tc-linkedin"></span>Linkedin</a></div>
+      </div>
+    </footer>
+    
+    <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-50616648-2 "
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        },
+        "trackClickOnCard" : {
+          "on": "click",
+          "selector": ".card",
+          "request": "event",
+          "vars": {
+            "eventCategory": "404",
+            "eventAction": "card-click",
+            "eventValue": "play"
+          }
+        },
+        "trackClickOnCardL" : {
+          "on": "click",
+          "selector": ".card.l",
+          "request": "event",
+          "vars": {
+            "eventCategory": "404",
+            "eventAction": "card-click",
+            "eventValue": "l"
+          }
+        },
+        "trackClickOnCardC" : {
+          "on": "click",
+          "selector": ".card.c",
+          "request": "event",
+          "vars": {
+            "eventCategory": "404",
+            "eventAction": "card-click",
+            "eventValue": "c"
+          }
+        },
+        "trackClickOnCardR" : {
+          "on": "click",
+          "selector": ".card.r",
+          "request": "event",
+          "vars": {
+            "eventCategory": "404",
+            "eventAction": "card-click",
+            "eventValue": "r"
+          }
+        },
+        "trackClickOnCardWin" : {
+          "on": "click",
+          "selector": ".card2",
+          "request": "event",
+          "vars": {
+            "eventCategory": "404",
+            "eventAction": "card-click",
+            "eventValue": "win"
+          }
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+
+  </body>
+</html>

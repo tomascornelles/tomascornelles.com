@@ -1,0 +1,61 @@
+{% spaceless %}
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set pageColor = page.header.color %}
+{% if page.header.logoColor %}
+  {% set logo = page.header.logoColor %}
+{% else %}
+  {% set logo = 'black' %}
+{% endif %}
+{% set blog_image = page.media.images|first %}
+{% if theme_config.favicon|length > 0 %}
+    {% for item in theme_config.favicon %}
+        {% set favicon = item.name %}
+    {% endfor %}
+{% endif %}
+{% endspaceless %}
+<style amp-custom> 
+  @font-face { font-family: 'tc2018'; src:  url('{{theme_url}}/fonts/tc2018.eot?plb917'); src:  url('{{theme_url}}/fonts/tc2018.eot?plb917#iefix') format('embedded-opentype'), url('{{theme_url}}/fonts/tc2018.ttf?plb917') format('truetype'), url('{{theme_url}}/fonts/tc2018.woff?plb917') format('woff'), url('{{theme_url}}/fonts/tc2018.svg?plb917#tc2018') format('svg'); font-weight: normal; font-style: normal; }
+
+  {% include 'main.css' %}
+
+  {% if page_type == 'type_post' %}
+    {% set custom_post = true %}
+  {% elseif page_type == 'type_work' %}
+    {% set custom_post = true %}
+  {% elseif page_type == 'page_home' %}
+    {% set custom_home = true %}
+  {% elseif page_type == '404' %}
+    {% set custom_404 = true %}
+  {% endif %}
+
+  {% if custom_post %}
+    header .scroll { background: {{page.header.color}} url({{blog_image.url}}) no-repeat center center; background-size: cover; } header .fondo-fijo { background: {{page.header.color}}; } header .logo-svg svg{ fill: {{logo}}; } header .tc-menu { color: {{logo}}; } a { color: {{pageColor}}; background-color: transparent; transition: all 0.5s ease; } a:hover { background-color: {{pageColor}}; color: #ffffff; } h1 { color: {{pageColor}}; text-align: center; } h2, h3, h4, h5, h6 { color: {{pageColor}}; } .post .data { border-top-color: {{pageColor}}; } footer { background: {{pageColor}}; color: {{logo}}; } .post .button {border-color: {{page.header.color}}} footer a span {color: {{logo}}} .social a {color: transparent;} .post .social a em, .work .social a em { color: {{page.header.color}};}
+
+  {% elseif custom_home %}
+    {# {% set home_image = page.media.images|first %}
+    header .scroll { background: url({{home_image.url}}) no-repeat center center; background-size: cover; height: 50vw;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }  #}
+
+    {# {% for p in page.find('/porfolio').children.order('date', 'desc').slice(0, 1) %}
+      {% set home_image = p.media.images|first.grayscale.contrast(-20).cropZoom(1200,600) %}
+      .home .scroll { background: url({{home_image.url}}) no-repeat center center; background-size: cover; 
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }
+    {% endfor %}
+
+    .home .sobre-scroll { height: 100%; 
+      background: -moz-linear-gradient(top, rgba(255,228,85,1) 0%, rgba(255,228,85,0) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,228,85,1) 0%,rgba(255,228,85,0) 100%);
+      background: linear-gradient(to bottom, rgba(255,228,85,1) 0%,rgba(255,228,85,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe455', endColorstr='#00ffe455',GradientType=0 );}
+    header .fondo-fijo { background: {{page.header.color}}; } header .logo-svg svg{ fill: {{logo}}; } #}
+    .main { padding-top: 38vw}
+
+  {% elseif custom_404 %}
+    header .scroll { background: {{page.header.color}} url({{blog_image.url}}) repeat center center; }
+  {# {% else %}
+    header .scroll { display: none}
+    .main { padding-top: 10em} #}
+  {% endif %}
+</style>

@@ -20,7 +20,7 @@ languages:
 home:
   hide_in_urls: true
 pages:
-  theme: tcAMP18
+  theme: tcAMP2018
   order:
     by: default
     dir: asc

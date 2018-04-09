@@ -1,0 +1,23 @@
+name: tcAMP18
+description: "TC2018 theme for **Grav** with **AMP**"
+version: 0.1.0
+icon: bolt
+author:
+  name: Tomás Cornelles
+  email: tomascornelles@gmail.com
+  url: https://tomascornelles.com
+keywords: grav, theme, core, modern, fast, responsive, html5, css3, amp
+bugs: https://github.com/getgrav/grav-theme-antimatter/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    favicon:
+        type: file
+        label: THEME_TC2018.FAVICON
+        help: THEME_TC2018.FAVICON_HELP
+        destination: 'user/themes/tc2018/images'
+        multiple: false
+        accept:
+            - image/*

@@ -1,0 +1,28 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+{% set category = grav.uri.params("category", true) %}
+{% set tag = grav.uri.params("tag", true) %}
+<div class="main">
+  <section class="container-c">
+    {% if category or tag %}
+    <h2>
+      Entradas
+      {% if category %} sobre {{category|regex_replace(['/%20/'], [' '])}} {% endif %}
+      {% if tag %} con la etiqueta {{tag|regex_replace(['/%20/'], [' '])}} {% endif %}
+    </h2>    
+    <nav class="breadcrum">
+      <a href="{{page.url}}">Volver al {{page.title}} </a>
+    </nav>
+    {% endif %}
+    {{ page.content }}
+    {% set collection = page.collection() %}
+    {% for child in collection %}
+      {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+    {% endfor %}
+
+    {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

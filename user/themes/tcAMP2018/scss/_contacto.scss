@@ -1,0 +1,76 @@
+.container-form {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 5em;
+  padding: 0 1em;
+
+  form {
+    margin-top: 5em;
+    .formulario {
+      transition: all .4s ease;
+      height: auto;
+    }
+    .success {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  label {
+    font-size: 1.6em;
+    margin: 1em 0 .5em;
+    display: block;
+    font-family: $font2;
+  }
+
+  input[type=text], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .5rem;
+    font-family: $font1;
+    font-size: 1.4em;
+    border: 1px solid $cNegro;
+    box-shadow: 0 0 .5em rgba(0,0,0,.2)
+  }
+
+  textarea {
+    height: 10em;
+    margin-bottom: 1em;
+  }
+
+  // button[type=submit] {
+  //   background: $cColor;
+  //   color: $cNegro;
+  //   border: none;
+  //   padding: 0.5em 1em;
+  //   margin-top: 1em;
+  //   transition: all .4s ease;
+  //   cursor: pointer;
+  //   font-size: 1.5em;
+
+  //   span {
+  //     font-size: 80%;
+  //     margin-left: 1em;
+  //   }
+  // }
+  .boton {
+    background: $cColor;
+
+    &:hover {
+      background: $cNegro;
+      color: $cColor;
+    }
+  }
+  .mensaje {
+    font-size: 1.4em;
+    background: $cColor;
+    margin: 1em 0;
+    padding: .5em;
+    transition: all .4s ease;
+  }
+}
+@media (min-width: 600px) {
+  .container-from {
+    padding: 0 2em;
+  }
+}

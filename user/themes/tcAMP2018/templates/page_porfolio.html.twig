@@ -1,0 +1,29 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+{% set client = grav.uri.params("client", true) %}
+{% set year = grav.uri.params("year", true) %}
+{% set type = grav.uri.params("type", true) %}
+{% set tech = grav.uri.params("tech", true) %}
+<div class="main">
+  <section class="container-i">
+    {% if client or year or type or tech %}    
+    <h2>
+      Trabajos
+      {% if client %} sobre {{client|regex_replace(['/%20/'], [' '])}} {% endif %}
+      {% if year %} del año {{year|regex_replace(['/%20/'], [' '])}} {% endif %}
+      {% if type %} de {{type|regex_replace(['/%20/'], [' '])}} {% endif %}
+      {% if tech %} donde se usa {{tech|regex_replace(['/%20/'], [' '])}} {% endif %}
+    </h2>
+    <nav class="breadcrum">
+      <a href="{{page.url}}">Volver al {{page.title}} </a>
+    </nav>
+    {% endif %}
+    
+    {{ page.content }}
+    {% set collection = page.collection() %}
+    {% for child in collection %}
+      {% include 'partials/work_item.html.twig' with {'page':child, 'truncate':true} %}
+    {% endfor %}
+  </section>
+</div>
+{% endblock %}
