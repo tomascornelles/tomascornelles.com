@@ -1,0 +1,16 @@
+Current state of the backup store:
+
+Store: backup
+Max Size: 10737418240
+Max Size Translated: 10GB
+Keep Days: 10
+Time: 1521706753
+Time Translated: 22/03/2018 09:19:13
+Clean All: 
+Purged: 0
+Purged Translated: 0B
+Backup Capacity Used: 53169762
+Backup Capacity Used Translated: 50.7MB
+Purged Files Exceeded Max Day: 0
+Purged Files Exceeded Max Capacity: 0
+Files Deleted: 0

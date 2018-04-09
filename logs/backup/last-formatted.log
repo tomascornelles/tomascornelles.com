@@ -1,0 +1,53 @@
+Last backup process summary:
+
+Run In Test Mode: 
+Current Scope: backup-manager.config
+Backup Scopes: admin, defaults, config, pages, user, media, images, audio, video, log, plugins, themes, imagecache, cache, data, system, purge, purgeall, purgepartial, purgetests, purgepages, purgeimages, purgemedia, purgethemes, purgedata, purgeplugins, purgeconfig, purgesystem, purgefailed
+Ignore Top Level: backup, cache, images, logs, tmp
+Ignore Folders: .git, .svn, .hg, .idea, node_modules
+Ignore File Types: 
+Site Ignore Top Level: 
+Site Ignore Folders: 
+Add As Empty Folders: 
+Restrict File Types: 
+Multiple Paths: 
+Intersect Site Top Levels: 
+Intersect Site Ignore Folders: 
+Force Add As Empty: 
+Log Backup: 1
+Site Backup: 1
+Process Timeout: 600
+Zip File Status: success
+Assumed Ratio For Tests: 1.2
+Bytes Excluded Raw: 12674946
+Bytes Excluded: 12.09MB
+Files Excluded: 742
+Files To Zip: 0
+Bytes To Zip Raw: 32689454
+Bytes To Zip: 31.18MB
+Zipped Bytes Raw: 13351806
+Zipped Bytes: 12.73MB
+Compression Ratio: 2.4483170291719
+Zip Savings: 59.16
+Excluded Path List: C:/wamp64/www/tc-grav/backup, C:/wamp64/www/tc-grav/cache, C:/wamp64/www/tc-grav/images, C:/wamp64/www/tc-grav/logs, C:/wamp64/www/tc-grav/tmp, C:/wamp64/www/tc-grav/user/themes/tc2018/.git
+Backup Starttime Raw: 1521706901.699
+Backup Endtime Raw: 1521706913.2584
+Backup Duration Raw: 11.55940413475
+Remaining Timeout Raw: 588.44059586525
+Duration Before Save Raw: 0
+Backup Duration: 11.56s
+Remaining Timeout: 588.44s
+Duration Before Save: 
+Keep Days: 10
+Backup Path: C:/wamp64/www/tc-grav/backup
+Storage Capacity Raw: 10737418240
+Capacity Used Raw: 131772
+Storage Files Deleted: 0
+Storaged Purged Bytes Raw: 0
+Storage Files Exceeded Max Days: 0
+Storage Files Exceeded Max Capacity: 0
+Storage Last Check Raw: 1521706902
+Storage Capacity: 10GB
+Capacity Used: 128.7KB
+Storage Purged Bytes: 0B
+Storage Last Check: 22/03/2018 09:21:42
