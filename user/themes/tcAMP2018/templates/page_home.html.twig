@@ -7,7 +7,6 @@
       <h1>Frontend developer <br>en Barcelona</h1>
     </div>
   </div>
-  <h1 class="title"></h1>
   <section class="works">
     <div class="container-i">
         {% for page in page.find('/porfolio').children.order('date', 'desc').slice(0, 12) %}

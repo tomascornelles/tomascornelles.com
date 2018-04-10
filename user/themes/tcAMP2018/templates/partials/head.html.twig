@@ -1,6 +1,11 @@
 {% spaceless %}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% if page.header.color %}
 {% set pageColor = page.header.color %}
+{% else %}
+{% set pageColor = '#FFE455' %}
+{% endif %}
+
 {% if page.header.logoColor %}
   {% set logo = page.header.logoColor %}
 {% else %}
@@ -13,6 +18,7 @@
     {% endfor %}
 {% endif %}
 {% endspaceless %}
+<meta name="theme-color" content="{{pageColor}}" />
 <style amp-custom> 
   @font-face { font-family: 'tc2018'; src:  url('{{theme_url}}/fonts/tc2018.eot?plb917'); src:  url('{{theme_url}}/fonts/tc2018.eot?plb917#iefix') format('embedded-opentype'), url('{{theme_url}}/fonts/tc2018.ttf?plb917') format('truetype'), url('{{theme_url}}/fonts/tc2018.woff?plb917') format('woff'), url('{{theme_url}}/fonts/tc2018.svg?plb917#tc2018') format('svg'); font-weight: normal; font-style: normal; }
 
