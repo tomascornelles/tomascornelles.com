@@ -87,4 +87,5 @@ $RECYCLE.BIN/
 /cache/compiled/files
 /cache/doctrine
 /cache/twig
+/cache/gpm
 /images

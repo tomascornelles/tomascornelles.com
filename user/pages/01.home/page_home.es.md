@@ -25,6 +25,7 @@ logos:
         image: iebusinessschool.png
     -
         text: NISSAN
+        url: 'porfolio/client:Nissan'
         image: nissan.png
     -
         text: SCUTUM

@@ -20,7 +20,7 @@
     {% endif %}
     
     {{ page.content }}
-    {% set collection = page.collection() %}
+    {% set collection = page.collection().order('date', 'desc') %}
     {% for child in collection %}
       {% include 'partials/work_item.html.twig' with {'page':child, 'truncate':true} %}
     {% endfor %}
