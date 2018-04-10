@@ -84,3 +84,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+/cache/compiled/files
+/cache/doctrine
+/cache/twig
+/images
