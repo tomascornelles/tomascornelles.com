@@ -20,4 +20,10 @@ taxonomy:
 
 La calculadora financiera de **Nissan**, es la aplicación mediante la cual se obtienen las cuotas de financiación de cada vehículo.
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
 ![Vistas de la versión mobile y escritorio](cafi_002.png)

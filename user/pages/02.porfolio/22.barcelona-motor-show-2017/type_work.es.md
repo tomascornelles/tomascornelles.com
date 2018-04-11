@@ -18,6 +18,12 @@ taxonomy:
         - '2017'
 ---
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in hic fugiat, repellat ratione id quod vitae sequi maiores explicabo ad labore, mollitia minus ab. Sequi repellendus similique, quibusdam enim.
+
 ![](bms_002.png)
 ![](bms_003.png)
 ![](bms_004.png)

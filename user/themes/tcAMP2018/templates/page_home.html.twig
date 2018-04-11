@@ -37,9 +37,9 @@
           {% set image_page = image_parts.dirname == '.' ? page : page.find(image_parts.dirname) %}
   
           {% if logo.url %}
-            <a href="{{logo.url}}"><amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.name}}"></a>
+            <a href="{{logo.url}}"><span>{{logo.text}}</span><amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.text}}"></a>
           {% else %}
-            <amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.name}}">
+            <amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.text}}">
           {% endif %}
         </div>
       {% endfor %}
