@@ -1,4 +1,4 @@
-absolute_urls: false
+absolute_urls: true
 timezone: Europe/Madrid
 param_sep: ':'
 wrapped_site: false

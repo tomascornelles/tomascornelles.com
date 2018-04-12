@@ -3,7 +3,7 @@
 <div class="main home">
   <div class="scroll">
     <div class="logo-svg">
-      {% include 'partials/logo.html.twig' %}
+      {% include 'partials/logo_home.html.twig' %}
       <h1>Frontend developer <br>en Barcelona</h1>
     </div>
   </div>
@@ -35,7 +35,6 @@
           {% set image_parts = pathinfo(logo.image) %}
           {% set image_basename = image_parts.basename %}
           {% set image_page = image_parts.dirname == '.' ? page : page.find(image_parts.dirname) %}
-  
           {% if logo.url %}
             <a href="{{logo.url}}"><span>{{logo.text}}</span><amp-img src="{{ image_page.media[image_basename].url }}" width="300" height="300" layout="responsive" alt="{{logo.text}}"></a>
           {% else %}

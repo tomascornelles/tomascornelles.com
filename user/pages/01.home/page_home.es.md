@@ -1,6 +1,6 @@
 ---
 title: Home
-media_order: 'nissan.png,scutum.png,ted.png,torretarragona.png,travelpartners.png,vae.png,alzheimer.png,bp.png,dockers.png,gallinablanca.png,icex.png,iebusinessschool.png'
+media_order: 'tc18_001.png,nissan.png,scutum.png,ted.png,torretarragona.png,travelpartners.png,vae.png,alzheimer.png,bp.png,dockers.png,gallinablanca.png,icex.png,iebusinessschool.png'
 logos:
     -
         text: 'Alzheimer catalunya'

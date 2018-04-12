@@ -18,6 +18,23 @@
     {% endfor %}
 {% endif %}
 {% endspaceless %}
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{theme_url}}/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{theme_url}}/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{theme_url}}/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{theme_url}}/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{theme_url}}/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{theme_url}}/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{theme_url}}/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{theme_url}}/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{theme_url}}/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{theme_url}}/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{theme_url}}/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{theme_url}}/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{theme_url}}/images/favicon-16x16.png">
+{# <link rel="manifest" href="/manifest.json"> #}
+<meta name="msapplication-TileColor" content="{{pageColor}}">
+<meta name="msapplication-TileImage" content="{{theme_url}}/images/ms-icon-144x144.png">
 <meta name="theme-color" content="{{pageColor}}" />
 <style amp-custom> 
   @font-face { font-family: 'tc2018'; src:  url('{{theme_url}}/fonts/tc2018.eot?plb917'); src:  url('{{theme_url}}/fonts/tc2018.eot?plb917#iefix') format('embedded-opentype'), url('{{theme_url}}/fonts/tc2018.ttf?plb917') format('truetype'), url('{{theme_url}}/fonts/tc2018.woff?plb917') format('woff'), url('{{theme_url}}/fonts/tc2018.svg?plb917#tc2018') format('svg'); font-weight: normal; font-style: normal; }
@@ -38,30 +55,10 @@
     header .scroll { background: {{page.header.color}} url({{blog_image.url}}) no-repeat center center; background-size: cover; } header .fondo-fijo { background: {{page.header.color}}; } header .logo-svg svg{ fill: {{logo}}; } header .tc-menu { color: {{logo}}; } a { color: {{pageColor}}; background-color: transparent; transition: all 0.5s ease; } a:hover { background-color: {{pageColor}}; color: #ffffff; } h1 { color: {{pageColor}}; text-align: center; } h2, h3, h4, h5, h6 { color: {{pageColor}}; } .post .data { border-top-color: {{pageColor}}; } footer { background: {{pageColor}}; color: {{logo}}; } .post .button {border-color: {{page.header.color}}} footer a span {color: {{logo}}} .social a {color: transparent;} .post .social a em, .work .social a em { color: {{page.header.color}};} .breadcrum a {color: {{page.header.color}}} .breadcrum a:hover {color: {{logo}}; background: {{page.header.color}}}
 
   {% elseif custom_home %}
-    {# {% set home_image = page.media.images|first %}
-    header .scroll { background: url({{home_image.url}}) no-repeat center center; background-size: cover; height: 50vw;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }  #}
-
-    {# {% for p in page.find('/porfolio').children.order('date', 'desc').slice(0, 1) %}
-      {% set home_image = p.media.images|first.grayscale.contrast(-20).cropZoom(1200,600) %}
-      .home .scroll { background: url({{home_image.url}}) no-repeat center center; background-size: cover; 
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }
-    {% endfor %}
-
-    .home .sobre-scroll { height: 100%; 
-      background: -moz-linear-gradient(top, rgba(255,228,85,1) 0%, rgba(255,228,85,0) 100%);
-      background: -webkit-linear-gradient(top, rgba(255,228,85,1) 0%,rgba(255,228,85,0) 100%);
-      background: linear-gradient(to bottom, rgba(255,228,85,1) 0%,rgba(255,228,85,0) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe455', endColorstr='#00ffe455',GradientType=0 );}
-    header .fondo-fijo { background: {{page.header.color}}; } header .logo-svg svg{ fill: {{logo}}; } #}
     .main { padding-top: 38vw}
 
   {% elseif custom_404 %}
     header .scroll { background: {{page.header.color}} url({{blog_image.url}}) repeat center center; }
-  {# {% else %}
-    header .scroll { display: none}
-    .main { padding-top: 10em} #}
+
   {% endif %}
 </style>

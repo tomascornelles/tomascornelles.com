@@ -4,7 +4,7 @@
 {% else %}
   {% set description = page.summary(100)|striptags %}
 {% endif %}
-<!-- {{header.seo_description}} -->
+
 <meta name="description" content="{{description}}"/>
 <meta name="robots" content="index follow">
 
@@ -17,7 +17,7 @@
 <meta property="og:url" content="{{page.url(true)}}" />
 <meta property="og:title" content="{{page.title}}" />
 <meta property="og:description" content="{{description}}" />
-<meta property="og:image" content="{{base_url_absolute}}/..{{blog_image.url}}" />
+<meta property="og:image" content="{{blog_image.url}}" />
 
 <link rel="canonical" href="{{page.url}}" />
 <script type="application/ld+json">

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1523446091,
-    'checksum' => 'e47512ed4a823abf3cd464d867730227',
+    'timestamp' => 1523528357,
+    'checksum' => '3d094c36cce385f7ea209b683d79fa98',
     'files' => [
         'user/config' => [
             'media' => [
@@ -71,7 +71,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1522996518
+                'modified' => 1523528356
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -79,7 +79,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1523446084
+                'modified' => 1523523347
             ],
             'themes/mache' => [
                 'file' => 'user/config/themes/mache.yaml',
@@ -710,7 +710,7 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'TomasCornelles',
+            'title' => 'Tomás Cornelles',
             'default_lang' => 'es',
             'author' => [
                 'name' => 'Tomás Cornelles',
@@ -762,7 +762,7 @@ return [
             ]
         ],
         'system' => [
-            'absolute_urls' => false,
+            'absolute_urls' => true,
             'timezone' => 'Europe/Madrid',
             'default_locale' => NULL,
             'param_sep' => ':',
