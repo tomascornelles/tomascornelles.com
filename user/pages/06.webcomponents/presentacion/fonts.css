@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-khylga');
+	src:url('fonts/icomoon.eot?#iefix-khylga') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-khylga') format('woff'),
+		url('fonts/icomoon.ttf?-khylga') format('truetype'),
+		url('fonts/icomoon.svg?-khylga#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-html-import:before {
+	content: "\e600";
+}
+
+.icon-custom-elements:before {
+	content: "\e601";
+}
+
+.icon-templates:before {
+	content: "\e602";
+}
+
+.icon-shadow-dom:before {
+	content: "\e603";
+}
+
+.icon-web:before {
+	content: "\e949";
+}
+
+.icon-twitter:before {
+	content: "\ea91";
+}
+
+.icon-linkedin:before {
+	content: "\eac9";
+}
+
+.icon-html5:before {
+	content: "\eadf";
+}
+
+
+
+@font-face {
+	font-family: 'browsers';
+	src:url('fonts/browsers.eot?-2defjs');
+	src:url('fonts/browsers.eot?#iefix-2defjs') format('embedded-opentype'),
+		url('fonts/browsers.woff?-2defjs') format('woff'),
+		url('fonts/browsers.ttf?-2defjs') format('truetype'),
+		url('fonts/browsers.svg?-2defjs#browsers') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="br-"], [class*=" br-"] {
+	font-family: 'browsers';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.br-chrome:before {
+	content: "\eae5";
+}
+
+.br-firefox:before {
+	content: "\eae6";
+}
+
+.br-IE:before {
+	content: "\eae7";
+}
+
+.br-opera:before {
+	content: "\eae8";
+}
+
+.br-safari:before {
+	content: "\eae9";
+}
+

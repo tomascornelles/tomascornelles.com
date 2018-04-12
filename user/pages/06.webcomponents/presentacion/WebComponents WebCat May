@@ -1,0 +1,114 @@
+# Web Components
+> 27 de Mayo, 2015
+> WebCatBCN
+
+## Templates
+El elemento `<template>` es usado para declarar fragmentos de **HTML** que pueden ser clonados e insertados en el documento mediante `script`. El `<template>` no se representa hasta el momento de ser usado .
+
+**Templates desde el DOM**
+> Ejemplo extraído de:
+> [http://webcomponents.org/articles/introduction-to-template-element/]
+```
+<div style="display:none;">
+  <div>
+    <h1>Web Components</h1>
+    <img src="http://webcomponents.org/img/logo.svg">
+  </div>
+</div>
+```
+Mediante esta técnica el DOM se renderiza al cargar el documento y con él se descargan los recursos enlazados, en este caso la imagen `svg`.
+
+**Sistemas de plantillas**
+Actualmente existen diversas librerías que proporcionan la capacidad de emplear plantillas desde el navegador. Con el elemento `<template>` **W3C** pretende evitar la necesidad de librerías adicionales y proporcionar un sistema completo de creación y desarrollo de la web.
+
+**Templates HTML5**
+Con el elemento `<template>` creamos contenido 'inerte' al DOM, de manera que éste no se ejecuta hasta que es llamado mediante `script`.
+
+Los scripts incluidos en el template no se ejecutan y el contenido como `img` y `video` no se descargarán hasta que sea necesario.
+
+### Uso de los templates
+1. Definir el bloque de código para ser clonado **dentro** de la etiqueta `<template>`.
+2. Mediante `script` clonar el contenido de `<template>`.
+3. Anexar el contenido clonado al documento para renderizarse.
+
+### Ejemplo
+> Ejemplo extraído de:
+> [https://html.spec.whatwg.org/multipage/scripting.html#the-template-element]
+
+```
+<!DOCTYPE html>
+<title>Cat data</title>
+<script>
+ // Data is hard-coded here, but could come from the server
+ var data = [
+   { name: 'Pillar', color: 'Ticked Tabby', sex: 'Female (neutered)', legs: 3 },
+   { name: 'Hedral', color: 'Tuxedo', sex: 'Male (neutered)', legs: 4 },
+ ];
+</script>
+<table>
+ <thead>
+  <tr>
+   <th>Name <th>Colour <th>Sex <th>Legs
+ <tbody>
+  <template id="row">
+   <tr><td><td><td><td>
+  </template>
+</table>
+<script>
+ var template = document.querySelector('#row');
+ for (var i = 0; i < data.length; i += 1) {
+   var cat = data[i];
+   var clone = template.content.cloneNode(true);
+   var cells = clone.querySelectorAll('td');
+   cells[0].textContent = cat.name;
+   cells[1].textContent = cat.color;
+   cells[2].textContent = cat.sex;
+   cells[3].textContent = cat.legs;
+   template.parentNode.appendChild(clone);
+ }
+</script>
+```
+
+### Vinculación de datos
+El elemento `<template>` no proporciona vinculación de datos, de manera que **no** permite hacer cosas como:
+
+```
+<template bind="{{items}}"></template>
+
+<template repeat="{{item in items}}"></template>
+
+<template if="{{item.active}}"></template>
+```
+
+Para ello deberemos emplear librerías como **Polymer** o **X-Tags** que amplían las propiedades de los web components.
+
+### Navegadores soportados
+En estos momentos el elemento `<templates>` es soportado por Chrome, Opera, Safari 8  y Firefox. Para IE y Edge se deberá usar Polyfils como webcomponents.js y platform.js
+
+## Shadow DOM
+
+Shadow DOM nos permite encerrar código en un entorno separado del resto, de manera que éste puede ser completamente ajeno al resto del documento web.
+
+Se acabó el CSS que afecta a donde no debe porque un selector afecta a elementos del DOM imprevistos, se acabó el JavaScript que se ejecuta donde no debe… se acabó el usar iframes para proteger un widget del exterior.
+
+### Ejemplo 
+```
+<style>
+	h3{ color: blue; }
+</style>
+<div>
+    <h3>Light DOM</h3>
+</div>
+<script>
+	var host = document.querySelector('div');
+	var root = host.createShadowRoot();
+	root.innerHTML = '<style>h3{ color: red; }</style>' + 
+                 '<h3>Shadow DOM</h3>';
+</script>
+```
+En los navegadores compatibles, el `<h3>` del light DOM (en oposición al shadow DOM) es azul y el del shadow DOM es rojo.
+
+Con shadow DOM conseguimos que nuestros nuevos componentes sean estables independientemente del resto de librerías que se empleen en el proyecto.
+
+## Custom Elements
+

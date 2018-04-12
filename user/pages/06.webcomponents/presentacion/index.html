@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Components</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="fonts.css" media="screen" title="no title" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="import" href="web-presentation.html">
+  <link rel="stylesheet" href="styles/tomorrow.css">
+	<link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+	<link href="/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <web-presentation>
+    <web-presentation-keyboardcontrols></web-presentation-keyboardcontrols>
+    <!--! Portada !-->
+    <web-slide-title class="black">
+      <h1 class="right">Web Components</h1>
+      <h2 class="right">by @tomascornelles</h2>
+      <!--!
+      <h3 class="right">#WebCatBCN<br>27 de Mayo 2015<br>a las 19h</h3>
+      <h3 class="right">Bar Scorpio<br>
+      <em>Alí Bei, 4, 08010</em></h3>
+      !-->
+    </web-slide-title>
+
+    
+    <web-slide class="yellow">
+      <h1>La web <strong>evoluciona</strong> continuamente</h1>
+      <h2>W3C ha <strong>aprendido</strong> de nosotros</h2>
+      <h2>Se <strong>adapta</strong> a nuestra forma de trabajar<br>
+      <small>Animaciones y efectos en CSS3, etiquetas semanticas...</small></h2>
+      <h2>Se <strong>adelanta</strong> a nuestras necesidades<br>
+      <small>Selectores CSS3, APIs en JS, nuevas etiquetas funcionales...</small></h2>
+    </web-slide>
+    
+    
+    <web-slide class="yellow">
+      <h1>Pero cada vez exigimos más</h1>
+      <h2><strong>Internet</strong> cada vez avanza más rápido</h2>
+      <h2>No podemos <strong>esperar</strong> nuevos elementos, <br>
+      ni a que lo <strong>implementen</strong> los navegadores</h2>
+      <h2>Queremos más y lo queremos <strong>AHORA</strong></h2>
+
+    </web-slide>
+    
+    
+    <web-slide class="yellow">
+      <h1>Imaginad crear un slider así de fácil</h1>
+      <pre><code class="html"><big>
+&lt;mi-carousel&gt;
+    &lt;img src=&quot;image1.jpg&quot;&gt;
+    &lt;img src=&quot;image2.jpg&quot;&gt;
+    &lt;img src=&quot;image3.jpg&quot;&gt;
+    &lt;img src=&quot;image4.jpg&quot;&gt;
+&lt;/mi-carousel&gt;
+      </big></code></pre>
+      <h2><strong>¿Como?</strong></h2>
+
+    </web-slide>
+    
+    
+    <web-slide class="wc02">
+      <h1 class="hero">
+      Web <br>Components <sub>⤸</sub></h1>
+
+    </web-slide>
+    
+    
+    <web-slide class="about">
+      <h1>¿Quién está hablando?</h1>
+      <h2><strong>Tomás Cornelles</strong></h2>
+      <h3>Frontend developer</h3>
+      <h4>Veterano de la primera<br>
+      Guerra de Navegadores</h4>
+      <h4>Block builder</h4>
+      <h5>Scientific</h5>
+      <h6>Photographer</h6>
+
+    </web-slide>
+    
+   
+    <web-slide>
+      <h1>Los web components nos ofrecen las herramientas necesarias</h1>
+      <h3><span class="icon-templates"></span> Templates</h3>
+      <h3><span class="icon-shadow-dom"></span> Shadow DOM</h3>
+      <h3><span class="icon-custom-elements"></span> Custom Elements</h3>
+      <h3><span class="icon-html-import"></span> HTML Import</h3>
+
+    </web-slide>
+    
+    <!--! Incluir imagen !-->
+    
+    <web-slide>
+      <h1>Templates <span class="icon-templates"></span></h1>
+      <h3>Los templates nos permiten <strong>definir</strong> fragmentos de HTML para reutilizar</h3>
+      <h3>El <strong>contenido</strong> del template NO se representa hasta ser usado</h3>
+      <pre><code class="html">
+&lt;table id="datos"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Nombre &lt;th&gt;Teléfono &lt;th&gt;Email
+ &lt;tbody&gt;
+  <strong>&lt;template id="filas"&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;td&gt;&lt;td&gt;
+  &lt;/template&gt;</strong>
+&lt;/table&gt;
+      </code></pre>
+    </web-slide>
+    
+
+    <web-slide>
+      <h1>Templates <span class="icon-templates"></span></h1>
+      <h3>Mediante JavaScript <strong>clonamos</strong> el elemento</h3>
+      <h3>Y lo <strong>insertamos</strong> donde deseemos</h3>
+      <pre><code class="js">
+var datos = document.querySelector(&#39;#datos&#39;);
+var filas = document.querySelector(&#39;#filas&#39;);
+var clone = document.importNode(filas.content);
+datos.appendChild(clone);
+      </code></pre>
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Shadow DOM <span class="icon-shadow-dom"></span></h1>
+      <h3>Nos permite <strong>encerrar</strong> el código en un entorno aislado.<br>
+      <small>Por defecto, nada entra ni sale del Shadow boundary</small></h3>
+      <h3>Evita <strong>conflictos</strong> entre componentes</h3>
+      <pre><code class="html">
+&lt;div id="host"&gt;Visible&lt;/div&gt;</code>
+<code class="js">var host = document.querySelector('#host');
+var root = host.createShadowRoot();
+var div = document.createElement('div');
+div.textContent = 'Oculto';
+root.appendChild(div);
+      </code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Shadow DOM <span class="icon-shadow-dom"></span></h1>
+      <pre><code class="html">
+&lt;div id="host"&gt;Visible&lt;/div&gt;</code>
+<code class="js">var host = document.querySelector('#host');
+var root = host.createShadowRoot();
+var div = document.createElement('div');
+div.textContent = 'Oculto';
+root.appendChild(div);
+      </code></pre>
+      <h3>Los navegadores <strong>compatibles</strong> con el Shadow DOM<br>
+      mostrarán los textos "Visible" y "Oculto".</h3>
+      <h3>Los estilos o eventos encerrados no se aplican al exterior.</h3>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Custom Elements <span class="icon-custom-elements"></span></h1>
+      <h3>Permite <strong>definir</strong> elementos personalizados</h3>
+      <h3>Va más allá de crear etiquetas semánticas</h3>
+      <h3>Son el eje <strong>principal</strong> de los Web Components</h3>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Custom Elements <span class="icon-custom-elements"></span></h1>
+      <h3>Para crear un nuevo elemento lo <strong>registramos</strong> mediante JS</h3>
+      <pre><code class="js">
+var miElemento = document.registerElement(&#39;mi-elemento&#39;, {
+  prototype: Object.create(HTMLElement.prototype)
+});
+      </code></pre>
+      <h3>¡Ya podemos <strong>usar</strong> el nuevo elemento!</h3>
+      <pre><code class="html">&lt;mi-elemento&gt;</code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Custom Elements <span class="icon-custom-elements"></span></h1>
+      <h3>También podemos <strong>extender</strong> los elementos existentes</h3>
+      <pre><code class="js">
+var miElemento = document.registerElement(&#39;mi-elemento&#39;, {
+  prototype: Object.create(HTMLElement.prototype),
+  extends: 'h2'
+});
+      </code></pre>
+      <h3>Para usarlo añadimos el atributo <code>is</code></h3>
+      <pre><code class="html">&lt;h2 is="mi-elemento"&gt;</code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>HTML Import <span class="icon-html-import"></span></h1>
+      <h3>Nos permite <strong>incorporar</strong> varios componentes externos<br>
+      y usar sólo los que necesitemos en cada momento</h3>
+      <h3>Son diferentes a los <code>includes</code></h3>
+      <h3>Ya existía para las hojas de estilos</h3>
+      <pre><code class="html">&lt;link rel="import" href="mi-elemento.html"&gt;</code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide class="black">
+      <h1>Browser support</h1>
+      <table class="support">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="br-chrome"></span></th>
+            <th><span class="br-opera"></span></th>
+            <th><span class="br-firefox"></span></th>
+            <th><span class="br-safari"></span></th>
+            <th><span class="br-IE"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><span class="icon-templates"></span></th>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="rojo"></td>
+          </tr>
+          <tr>
+            <th><span class="icon-shadow-dom"></span></th>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="ambar"></td>
+            <td class="rojo"></td>
+            <td class="rojo"></td>
+          </tr>
+          <tr>
+            <th><span class="icon-custom-elements"></span></th>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="ambar"></td>
+            <td class="rojo"></td>
+            <td class="rojo"></td>
+          </tr>
+          <tr>
+            <th><span class="icon-html-import"></span></th>
+            <td class="verde"></td>
+            <td class="verde"></td>
+            <td class="ambar"></td>
+            <td class="rojo"></td>
+            <td class="rojo"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </web-slide>
+    
+    
+    <web-slide class="black">
+      <h1>Para aumentar la compatibilidad, Polyfills</h1>
+      <h2>webcomponents.js</h2>
+      <h2>Polymer (Google)</h2>
+      <h2>X-Tags (Mozilla)</h2>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>¿Cómo creo mi propio componente?</h1>
+      <pre>mi-elemento.html
+      <code class="html"><small>
+&lt;template id=&quot;mi-elemento&quot;&gt;
+	&lt;style&gt;h2 {color:green}&lt;/style&gt;
+	&lt;content&gt;&lt;h2&gt;Mi contenido&lt;/h2&gt;&lt;/content&gt;
+&lt;/template&gt;
+&lt;script&gt;</code><code class="js">
+var proto = Object.create(HTMLElement.prototype);
+proto.createdCallback = function() {
+  var root = this.createShadowRoot();
+  var template = document.querySelector(&#39;#mi-elemento&#39;);
+  var clone = document.importNode(template.content, true);
+  root.appendChild(clone);
+}
+var miElemento = document.registerElement(&#39;mi-elemento&#39;, {
+  prototype: proto
+});</code><code class="html">
+&lt;/script&gt;</small>
+      </code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>¿Cómo creo mi propio componente</h1>
+      <h3>En tu <code>archivo.html</code> de destino, importa <code>mi-elemento.html</code></h3>
+      <pre><code class="html">&lt;link rel="import" href="mi-elemento.html"&gt;</code></pre>
+      <h3>e invoca al elemento con su etiqueta</h3>
+      <pre><code class="html">&lt;mi-elemento&gt;</code></pre>
+
+    </web-slide>
+    
+    
+    <web-slide>
+      <h1>Resultado</h1>
+      <pre><code class="html"><small>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Mi Elemento&lt;/title&gt;
+  &lt;style&gt;h2 {color: red}&lt;/style&gt;
+  <strong>&lt;link rel="import" href="mi-elemento.html"&gt;</strong>
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Visible&lt;/h2&gt;
+  <strong>&lt;mi-elemento&gt;&lt;/mi-elemento&gt;</strong>
+  &lt;/body&gt;
+&lt;/html&gt;
+      </small></code></pre>
+      <div class="ejemplo">
+        <h2><span class="rojo">Visible</span><br>
+        <span class="verde">Mi contenido</span></h2>
+      </div>
+
+    </web-slide>
+    
+    
+    
+    <web-slide class="yellow">
+      <h1>Es solo el primer día del futuro</h1>
+      <h3>La web debe ser <strong>descriptiva</strong></h3>
+      <h3>Debe <strong>unificar</strong> esfuerzos entre tecnologías</h3>
+      <h3>El futuro del HTML está en <strong>nosotros</strong></h3>
+
+    </web-slide>
+    
+    
+    <web-slide class="thanks">
+      <h1><strong>&lt;muchas-gracias&gt;</strong></h1>
+      <h3><span class="social icon-twitter"></span>@tomascornelles</h3>
+      <h3><span class="social icon-linkedin"></span>/tomascornelles</h3>
+      <h3><span class="social icon-web"></span>tomascornelles.com</h3>
+      <h4>Más información en<br>
+      tomascornelles.com/webcomponents</h4>
+      
+
+    </web-slide>
+  </web-presentation>
+  
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

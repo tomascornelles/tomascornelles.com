@@ -1,0 +1,148 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin: .7em 0;
+}
+web-slide-title h2 {
+  margin: 0;
+}
+
+web-slide-title::shadow div#content,
+web-slide::shadow div#content {
+  justify-content: initial;
+  align-items: initial;
+  text-align: initial;
+  padding: 20px;
+}
+.social {
+  font-size: 200%;
+  padding-right: .5em;
+}
+h1 [class^="icon-"] {
+  float: right;
+}
+/* Animation Example */
+web-slide.forward-out, web-slide-title.forward-out {
+  -webkit-animation: moveToLeft .7s ease-in-out both;
+  animation: moveToLeft .7s ease-in-out both;
+}
+web-slide +.forward-in, web-slide-title +.forward-in {
+  -webkit-animation: moveFromRight .7s ease both;
+  animation: moveFromRight .7s ease both;
+}
+@-webkit-keyframes moveToLeft {
+  from { }
+  to { -webkit-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+  from { }
+  to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+@-webkit-keyframes moveFromRight {
+  from { -webkit-transform: translateX(100%); }
+  to {}
+}
+@keyframes moveFromRight {
+  from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+  to {}
+}
+
+/* Colors */
+web-slide {
+  background:#ecf0f1;
+  color:#34495e;
+  border-top: 5px solid #f39c12;
+}
+web-slide.black {
+  background:#34495e;
+  color:#ecf0f1;
+  border-top: 5px solid #f39c12;
+}
+web-slide.yellow {
+  background:#f39c12;
+  color:#34495e;
+  border-top: 5px solid #34495e;
+}
+web-slide-title {
+  background: #ffffff url(img/lego01.jpg) no-repeat center center;
+  background-size: cover;
+  color:#34495e;
+  border-top: 5px solid #f39c12;
+  text-align: right;
+}
+.wc02 {
+  background: #ffffff url(img/lego03.jpg) no-repeat center center;
+  background-size: cover;
+  color:#34495e;
+  border-top: 5px solid #f39c12;
+  text-align: left;
+}
+.thanks {
+  background: #ffffff url(img/lego04.jpg) no-repeat center center;
+  background-size: cover;
+  color:#34495e;
+  border-top: 5px solid #f39c12;
+  text-align: left;
+ }
+  .about {
+    background: #ffffff url(img/tclego.jpg) no-repeat center center;
+    background-size: cover;
+    color:#34495e;
+    border-top: 5px solid #f39c12;
+    text-align: left;
+  }
+  .about h1, .about h2, .about h3, .about h4, .about h5, .about h6 {
+      margin: .4em 0;
+  }
+.wc02 h1 {
+  line-height: 100%;
+  text-align: left;
+}
+.wc02 footer {
+  color: #fff;
+}
+.right {
+  text-align:right;
+}
+.hero {
+  text-align:center;
+  font-size: 450%;
+  font-weight: bold;
+}
+.hero small {
+  font-size: 50%;
+  color: #ccc;
+}
+.support {
+  font-size: 220%;
+}
+.support th { padding: 0.1em 0.5em; }
+td.verde {background-color: #27ae60;}
+td.ambar {background-color: #f1c40f;}
+td.rojo  {background-color: #e74c3c;}
+.yellow .hljs .hljs-tag, .yellow .hljs .hljs-tag .hljs-title {
+  color: #2c3e50;
+}
+.yellow .hljs-attribute {
+  color: #2c3e50;
+}
+.yellow .hljs-value {
+  color: #c0392b;
+}
+.ejemplo  h2 {
+  margin: 0;
+  padding: .5em;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+  background: #fff;
+}
+.ejemplo .rojo {
+  color: #e74c3c;
+}
+.ejemplo .verde {
+  color: #27ae60;
+}

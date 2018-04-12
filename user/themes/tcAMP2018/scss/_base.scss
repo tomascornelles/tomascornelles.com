@@ -141,6 +141,9 @@ pre {
   padding: 0.5em 1em;
   background: $cColor;
   color: $cNegro;
+  box-shadow: 0 0 .5em rgba(0,0,0,.2);
+  border: 1px solid $cNegro;
+  transition: all 0.4s ease;
   span {
     font-size: 80%;
   }
@@ -153,6 +156,10 @@ pre {
     span {
       padding-left: 1em;
     }
+  }
+  &:hover {
+    color: $cColor;
+    background: $cNegro;
   }
 }
 .breadcrum {
