@@ -3,6 +3,7 @@ title: 'WebComponets WebCat'
 media_order: wc001.png
 color: '#f39c12'
 logoColor: black
+published: false
 date: '01-05-2015 00:00'
 taxonomy:
     type:

@@ -34,17 +34,6 @@
     </ul>
     {% endif %}
     
-    {% if page.taxonomy.tipo %}
-    <span class="tipos">
-        {% for tipo in page.taxonomy.tipo %}
-        
-        
-        
-        
-        {% endfor %}
-    </span>
-    {% endif %}
-
     <article>
       {{ page.content }}
     </article>
@@ -56,6 +45,16 @@
         <a href="https://plus.google.com/share?url={{page.url(true)}}" class="googleplus"><em class="tc-google-plus"></em>Google+</a>
         <a href="http://www.linkedin.com/shareArticle?url={{page.url(true)}}" class="linkedin"><em class="tc-linkedin"></em>Linkedin</a>
       </p>
+    </div>
+    <div class="prev_next">
+    {% set prevP = page.nextSibling() %}
+    {% set nextP = page.prevSibling() %}
+    {% if prevP.url %}
+      {% include 'partials/work_item.html.twig' with {'page':prevP, 'truncate':true} %}
+    {% endif %}
+    {% if nextP.url %}
+      {% include 'partials/work_item.html.twig' with {'page':nextP, 'truncate':true} %}
+    {% endif %}
     </div>
   </section>
 </div>

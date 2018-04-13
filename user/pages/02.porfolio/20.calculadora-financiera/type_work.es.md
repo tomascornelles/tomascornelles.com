@@ -3,6 +3,7 @@ title: 'Calculadora financiera'
 media_order: 'nissan001.png,cafi_002.png'
 color: '#c3002f'
 logoColor: white
+published: false
 date: '01-06-2016 16:33'
 taxonomy:
     tag:
