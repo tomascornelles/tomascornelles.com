@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1523612419,
-    'checksum' => '6390b421da661fbcc5a4d0793c09f8a7',
+    'timestamp' => 1523620498,
+    'checksum' => '29858ed82e30dc2570c2590d88e7b4b4',
     'files' => [
         'user/config' => [
             'media' => [
@@ -71,7 +71,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1523528356
+                'modified' => 1523619320
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -725,7 +725,7 @@ return [
                 4 => 'year'
             ],
             'metadata' => [
-                'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+                'description' => ''
             ],
             'summary' => [
                 'enabled' => true,

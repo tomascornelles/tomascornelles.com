@@ -10,7 +10,7 @@ taxonomies:
   - client
   - year
 metadata:
-  description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+  description: ''
 summary:
   enabled: true
   format: short
