@@ -31,8 +31,8 @@ INFLECTOR_ORDINALS:
 NICETIME:
   NO_DATE_PROVIDED: No se proporcionó fecha
   BAD_DATE: Fecha erronea
-  AGO: Hace
-  FROM_NOW: Dentro de
+  AGO: antes
+  FROM_NOW: desde ahora
   SECOND: segundo
   MINUTE: minuto
   HOUR: hora

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1523540863,
-    'checksum' => 'cfa266027631dd526e5fa6ca645352b6',
+    'timestamp' => 1523604241,
+    'checksum' => 'c3a67c99cdfeb9d9b62f185044c3215a',
     'files' => [
         'user/config' => [
             'media' => [
@@ -97,19 +97,19 @@ return [
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ]
         ],
         'user/plugins' => [
@@ -139,11 +139,11 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1521801780
+                'modified' => 1523603923
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1521643230
+                'modified' => 1523603914
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
@@ -293,6 +293,7 @@ return [
                 'route' => NULL,
                 'redirect_to_login' => true,
                 'redirect_after_login' => NULL,
+                'redirect_after_logout' => '/',
                 'route_activate' => '/activate_user',
                 'route_forgot' => '/forgot_password',
                 'route_reset' => '/reset_password',

@@ -1,25 +1,25 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1523540862,
-    'checksum' => 'd8f5ac17368656d26dc0b9cacb44869e',
+    'timestamp' => 1523604241,
+    'checksum' => 'db8a02ea6dcc739525f3a5ff6739ee39',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1521787992
+                'modified' => 1523604178
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1521787992
+                'modified' => 1523604178
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1521787994
+                'modified' => 1523604178
             ]
         ],
         'user/plugins' => [
@@ -49,11 +49,11 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1521801780
+                'modified' => 1523603923
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1521643230
+                'modified' => 1523603914
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/blueprints.yaml',
@@ -3110,6 +3110,12 @@ return [
                 'name' => 'plugins.login.redirect_after_login',
                 'validation' => 'loose'
             ],
+            'plugins.login.redirect_after_logout' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGOUT',
+                'name' => 'plugins.login.redirect_after_logout',
+                'validation' => 'loose'
+            ],
             'plugins.login.route_forgot' => [
                 'type' => 'text',
                 'size' => 'medium',
@@ -3965,6 +3971,7 @@ return [
                     'built_in_css' => 'plugins.login.built_in_css',
                     'route' => 'plugins.login.route',
                     'redirect_after_login' => 'plugins.login.redirect_after_login',
+                    'redirect_after_logout' => 'plugins.login.redirect_after_logout',
                     'route_forgot' => 'plugins.login.route_forgot',
                     'route_reset' => 'plugins.login.route_reset',
                     'route_profile' => 'plugins.login.route_profile',

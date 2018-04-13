@@ -85,3 +85,10 @@ Redirect 301 /blog/2015-02-24-procesar-en-evernote /blog/procesar-en-evernote
 Redirect 301 /blog/2015-03-05-notas-de-voz /blog/notas-de-voz
 Redirect 301 /blog/2015-03-26-organizate-con-google-keep /blog/organizate-con-google-keep
 Redirect 301 /blog/2015-04-30-3-cosas-que-debe-evitar-microsoft-edge /blog/cosas-que-debe-evitar-microsoft-edge
+# End Redirecciones
+
+# Cache HTTP
+# <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+# Header set Cache-Control "max-age=604800, public"
+# </FilesMatch>
+# End Cache HTTP
