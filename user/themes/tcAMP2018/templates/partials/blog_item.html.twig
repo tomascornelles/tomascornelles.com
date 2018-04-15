@@ -1,12 +1,15 @@
-{% set blog_image = page.media.images|first.cropZoom(800,400) %}
+{% set blog_image = page.media.images|first.cropZoom(1200,300) %}
 <a href="{{ page.url }}" class="post post-item">
 
-    <amp-img src="{{ blog_image.url }}" alt="{{ page.title }}" layout="responsive" width="800" height="400"></amp-img>
+    <amp-img src="{{ blog_image.url }}" alt="{{ page.title }}" layout="responsive" width="800" height="200"></amp-img>
     <div class="caja-texto">
         <h2>{{ page.title }}</h2><br>
         <time datetime="{{ page.date|date("c") }}">
             <span>{{ page.date|date("d") }} <strong>/</strong> {{ page.date|date("m") }} <strong>/</strong> {{ page.date|date("Y") }}</span>
         </time>
+        <div class="content">
+            {{page.summary(200)}}
+        </div>
     </div>
 
     {% if show_prev_next %}

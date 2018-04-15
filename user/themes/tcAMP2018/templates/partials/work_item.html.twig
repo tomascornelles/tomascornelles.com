@@ -1,5 +1,5 @@
 {# {% set blog_image = page.media.images|first.cropZoom(300,300) %} #}
-{% set blog_image = page.media.images|first.crop(450,150,300,300) %}
+{% set blog_image = page.media.images|first.crop(450,150,300,300).grayscale.brightness(30) %}
 
 <a href="{{page.url}}" class="work work-item">
     <amp-img src="{{blog_image.url}}" alt="{{ page.title }}" layout="responsive" width="1" height="1"></amp-img>

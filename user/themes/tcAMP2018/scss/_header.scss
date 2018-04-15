@@ -58,9 +58,9 @@ header {
     }
   }
   .menu-toggle {
-    position: fixed;
-    top: 0;
-    right: 0;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
     float: right;
     color: #000;
     font-size: 3em;
@@ -73,12 +73,12 @@ header {
   }
 }
 
-amp-sidebar {
+amp-sidebar#sidebar {
   background: $cColor;
-  -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
-  width: 70%;
-  max-width: 600px;
+  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+  width: 100vw;
+  max-width: 100vw !important;
 }
 .menu {
   a {
@@ -99,8 +99,20 @@ amp-sidebar {
     }
     
     &.active {
-      border-right: 1em solid $cNegro;
-      padding-right: 0.5em;
+      // border-right: 1em solid $cNegro;
+      // padding-right: 0.5em;
+
+      &:after {
+        color: $cNegro;
+        // background: $cNegro;
+        content: '\e900';
+        font-family: 'tc2018';
+        position: absolute;
+        margin-left: 0.5em;
+        width: 1em;
+        height: 0.99em;
+        text-align: left;
+      }
     }
   }
 

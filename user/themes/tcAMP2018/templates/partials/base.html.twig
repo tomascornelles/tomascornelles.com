@@ -43,23 +43,25 @@
             </a>
             {% if titulo %}<h1>{{page.title}}</h1>{% endif %}
           </div>
+          <a class="menu-toggle js-menu-toggle" on="tap:sidebar.open">
+            <span class="tc-menu"></span>
+          </a>
         </div>
       </div>
       <div class="scroll">
         <div class="sobre-scroll"></div>
       </div>
-          <a class="menu-toggle js-menu-toggle" on="tap:sidebar.open">
-            <span class="tc-menu"></span>
-          </a>
     </header>
 
     <amp-sidebar id="sidebar" layout="nodisplay" side="right">
-      <nav class="menu">
-        <a class="menu-toggle js-menu-toggle" on="tap:sidebar.close">
-          <span class="tc-close"></span>
-        </a>
-        {% include 'partials/menu.html.twig' %}
-      </nav>
+      <div class="container-i">
+        <nav class="menu">
+          <a class="menu-toggle js-menu-toggle" on="tap:sidebar.close">
+            <span class="tc-close"></span>
+          </a>
+          {% include 'partials/menu.html.twig' %}
+        </nav>
+      </div>
     </amp-sidebar>
 
     {% block content %}{% endblock %}

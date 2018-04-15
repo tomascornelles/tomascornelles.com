@@ -4,7 +4,7 @@ a.post-item {
   display: block;
   background-color: lighten($cGris, 20%);
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 25%;
   transition: all 0.2s ease;
   overflow: hidden;
   
@@ -36,6 +36,15 @@ a.post-item {
         font-style: normal;
       }
     }
+    .content {
+      background: $cNegro;
+      color: $cBlanco;
+      padding: .7rem;
+      margin-top: .5rem;
+      max-width: 800px;
+      font-size: 1.2em;
+      display: none;
+    }
   }
   
 
@@ -49,8 +58,15 @@ a.post-item {
 @media screen and (min-width: 600px) {
   a.post-item {
     .caja-texto {
-      h2 {
-        font-size: 2.4em;
+      font-size: 1.4em;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  a.post-item {
+    .caja-texto {
+      .content {
+        display: block;
       }
     }
   }
