@@ -1,8 +1,13 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
+<<<<<<< HEAD
     'timestamp' => 1523900719,
     'checksum' => '3fcf55a03e2c0b064a1d4adcd4bdc752',
+=======
+    'timestamp' => 1523894136,
+    'checksum' => 'b450c4bebc9902de4b9c49e1aff678c0',
+>>>>>>> 97702a4830aa8f0036d9539f479d8f195f2b21bb
     'files' => [
         'user/config' => [
             'media' => [
@@ -79,7 +84,11 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
+<<<<<<< HEAD
                 'modified' => 1523818324
+=======
+                'modified' => 1523893875
+>>>>>>> 97702a4830aa8f0036d9539f479d8f195f2b21bb
             ],
             'themes/mache' => [
                 'file' => 'user/config/themes/mache.yaml',
@@ -147,7 +156,15 @@ return [
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
+<<<<<<< HEAD
                 'modified' => 1523470392
+=======
+                'modified' => 1520841962
+            ],
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1523894134
+>>>>>>> 97702a4830aa8f0036d9539f479d8f195f2b21bb
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
