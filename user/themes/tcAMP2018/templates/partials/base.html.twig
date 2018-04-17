@@ -20,7 +20,6 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
     
     {% if page.slug == 'home' or page.slug == 'contacto' %}
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
@@ -74,15 +73,7 @@
           <a href="https://www.linkedin.com/in/tomascornelles"><span class="tc-linkedin"></span>Linkedin</a></div>
       </div>
     </footer>
-    <amp-user-notification id="my-notification"
-      layout="nodisplay">
-      <div class="container-i"><div>
-        Tengo que decir que este sitio usa cookies, pero ya sabes que son las de siempre, analytics & company.
-          <button on="tap:my-notification.dismiss"
-            class="button">De acuerdo</button>
-      </div>
-      </div>
-    </amp-user-notification>
+    
     <amp-analytics type="googleanalytics" id="analytics1">
     <script type="application/json">
     {

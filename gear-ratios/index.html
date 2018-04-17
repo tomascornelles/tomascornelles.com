@@ -5,13 +5,10 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-    <title>Calculadora de ratios de Bicicleta | Tomás Cornelles</title>
+    <title>Calculadora de ratios de Bicicleta</title>
     <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="theme-color" content="#fee455" />
-    <link rel="manifest" href="./manifest.json">
-
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -157,22 +154,20 @@
         background: #141414;
       }
       header {
-        padding: 0.6rem 0.7rem 0;
+        padding: 1em 2em 0;
       }
       header amp-img {
-        width: 7em;
-        height: 4.2em;
+        width: 8em;
       }
       h1 {
         display: inline-block;
         margin: 0;
-        margin-top: -0.5em;
+        margin-top: -0.3em;
         padding: 0;
-        padding-left: 2.75em;
+        padding-left: 2.2em;
         line-height: 1;
         font-family: 'Ubuntu Condensed';
         font-weight: 400;
-        font-size: 1.4em;
       }
       
       @media (min-width: 560px) {
@@ -192,11 +187,6 @@
     </style>
   </head>
   <body>
-  <amp-install-serviceworker
-    src="./serviceworker.js"
-    data-iframe-src="./install-service-worker.html"
-    layout="nodisplay">
-  </amp-install-serviceworker>
   <amp-state id="valores">
     <script type="application/json">
       {
@@ -216,7 +206,7 @@
         layout="responsive">
       </amp-img>
     </a>
-    <h1>Calculadora de ratios de Bicicleta</h1>
+    <h1>Calculadora de ratios</h1>
   </header>
   <div class="content">
     <select id="t" on="change:AMP.setState({valores: {t: event.value, visibility: 'visible'}})">
