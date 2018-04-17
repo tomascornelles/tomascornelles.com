@@ -37,7 +37,7 @@
     }
   }
 
-  .work-item:nth-child(n+7) {
+  .work-item:nth-child(n+5) {
     display: none;
   }
 }
@@ -202,8 +202,8 @@
       }
     }
     
-    .work-item:nth-child(n+7) {display: block;}
-    .work-item:nth-child(n+10) {
+    .work-item:nth-child(n+5) {display: block;}
+    .work-item:nth-child(n+7) {
       display: none;
     }
   }
@@ -257,5 +257,5 @@
       }
     }
   }
-  .home .work-item:nth-child(n+10) {display: block;}
+  .home .work-item:nth-child(n+7) {display: block;}
 }
