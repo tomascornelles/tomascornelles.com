@@ -1,200 +1,166 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1523900719,
-    'checksum' => '3fcf55a03e2c0b064a1d4adcd4bdc752',
+    'timestamp' => 1523863867,
+    'checksum' => '29858ed82e30dc2570c2590d88e7b4b4',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1523470391
+                'modified' => 1519906686
             ],
             'plugins/admin' => [
                 'file' => 'user/config/plugins/admin.yaml',
-                'modified' => 1523470391
+                'modified' => 1520842214
             ],
             'plugins/advanced-pagecache' => [
                 'file' => 'user/config/plugins/advanced-pagecache.yaml',
-                'modified' => 1523470391
+                'modified' => 1522070926
             ],
             'plugins/autoseo' => [
                 'file' => 'user/config/plugins/autoseo.yaml',
-                'modified' => 1523470391
+                'modified' => 1522325682
             ],
             'plugins/backup-manager' => [
                 'file' => 'user/config/plugins/backup-manager.yaml',
-                'modified' => 1523470391
+                'modified' => 1521699692
             ],
             'plugins/customadmin' => [
                 'file' => 'user/config/plugins/customadmin.yaml',
-                'modified' => 1523470391
+                'modified' => 1522326526
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1523470391
+                'modified' => 1521653922
             ],
             'plugins/error' => [
                 'file' => 'user/config/plugins/error.yaml',
-                'modified' => 1523470391
+                'modified' => 1521701280
             ],
             'plugins/login' => [
                 'file' => 'user/config/plugins/login.yaml',
-                'modified' => 1523470391
+                'modified' => 1521643308
             ],
             'plugins/minify-html' => [
                 'file' => 'user/config/plugins/minify-html.yaml',
-                'modified' => 1523470391
+                'modified' => 1522326406
             ],
             'plugins/pagination' => [
                 'file' => 'user/config/plugins/pagination.yaml',
-                'modified' => 1523470391
+                'modified' => 1522934221
             ],
             'plugins/quick-tray-links' => [
                 'file' => 'user/config/plugins/quick-tray-links.yaml',
-                'modified' => 1523470391
+                'modified' => 1522326474
             ],
             'plugins/readingtime' => [
                 'file' => 'user/config/plugins/readingtime.yaml',
-                'modified' => 1523470391
+                'modified' => 1521804362
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/config/plugins/simplesearch.yaml',
-                'modified' => 1523470391
+                'modified' => 1522304500
             ],
             'plugins/sitemap' => [
                 'file' => 'user/config/plugins/sitemap.yaml',
-                'modified' => 1523470391
+                'modified' => 1522326060
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1523470391
+                'modified' => 1519906682
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1523695701
+                'modified' => 1523619320
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1523470391
+                'modified' => 1519906686
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1523818324
+                'modified' => 1523612134
             ],
             'themes/mache' => [
                 'file' => 'user/config/themes/mache.yaml',
-                'modified' => 1523470391
+                'modified' => 1519907512
             ],
             'themes/tc2018' => [
                 'file' => 'user/config/themes/tc2018.yaml',
-                'modified' => 1523470391
+                'modified' => 1520944234
             ],
             'themes/tcAMP18' => [
                 'file' => 'user/config/themes/tcAMP18.yaml',
-                'modified' => 1523470391
+                'modified' => 1522326656
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1523470391
+                'modified' => 1523604178
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1523470391
+                'modified' => 1523604178
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1523470391
+                'modified' => 1523604178
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1523470391
+                'modified' => 1523604178
             ]
         ],
         'user/plugins' => [
-            'plugins/advanced-pagecache' => [
-                'file' => 'user/plugins/advanced-pagecache/advanced-pagecache.yaml',
-                'modified' => 1523470392
-            ],
-            'plugins/pagination' => [
-                'file' => 'user/plugins/pagination/pagination.yaml',
-                'modified' => 1523470392
-            ],
-            'plugins/form' => [
-                'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1523470392
-            ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1523470391
+                'modified' => 1522830994
             ],
-            'plugins/sitemap' => [
-                'file' => 'user/plugins/sitemap/sitemap.yaml',
-                'modified' => 1523470392
-            ],
-            'plugins/problems' => [
-                'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1523470392
+            'plugins/advanced-pagecache' => [
+                'file' => 'user/plugins/advanced-pagecache/advanced-pagecache.yaml',
+                'modified' => 1522070910
             ],
             'plugins/ampimage' => [
                 'file' => 'user/plugins/ampimage/ampimage.yaml',
-                'modified' => 1523470392
+                'modified' => 1522055216
             ],
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/devtools.yaml',
-                'modified' => 1523470392
-            ],
-            'plugins/error' => [
-                'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1523470392
-            ],
-            'plugins/login' => [
-                'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1523695701
+                'modified' => 1522692894
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1523470392
+                'modified' => 1519906590
+            ],
+            'plugins/error' => [
+                'file' => 'user/plugins/error/error.yaml',
+                'modified' => 1520841962
+            ],
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1523603923
+            ],
+            'plugins/login' => [
+                'file' => 'user/plugins/login/login.yaml',
+                'modified' => 1523603914
+            ],
+            'plugins/pagination' => [
+                'file' => 'user/plugins/pagination/pagination.yaml',
+                'modified' => 1522934205
+            ],
+            'plugins/problems' => [
+                'file' => 'user/plugins/problems/problems.yaml',
+                'modified' => 1519906566
+            ],
+            'plugins/sitemap' => [
+                'file' => 'user/plugins/sitemap/sitemap.yaml',
+                'modified' => 1522326026
             ]
         ]
     ],
     'data' => [
         'plugins' => [
-            'advanced-pagecache' => [
-                'enabled' => true,
-                'enabled_with_params' => true,
-                'enabled_with_query' => true,
-                'whitelist' => false,
-                'blacklist' => [
-                    0 => '/error',
-                    1 => '/random'
-                ]
-            ],
-            'pagination' => [
-                'enabled' => true,
-                'built_in_css' => false,
-                'delta' => 0
-            ],
-            'form' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'inline_css' => true,
-                'refresh_prevention' => false,
-                'client_side_validation' => true,
-                'inline_errors' => false,
-                'files' => [
-                    'multiple' => false,
-                    'limit' => 10,
-                    'destination' => 'self@',
-                    'avoid_overwriting' => false,
-                    'random_name' => false,
-                    'filesize' => 0,
-                    'accept' => [
-                        0 => 'image/*'
-                    ]
-                ]
-            ],
             'admin' => [
                 'enabled' => true,
                 'route' => '/admin',
@@ -255,18 +221,15 @@ return [
                 ],
                 'frontend_pages_target' => '_blank'
             ],
-            'sitemap' => [
+            'advanced-pagecache' => [
                 'enabled' => true,
-                'route' => '/sitemap',
-                'changefreq' => 'daily',
-                'priority' => 1,
-                'ignores' => [
-                    0 => '/404'
+                'enabled_with_params' => true,
+                'enabled_with_query' => true,
+                'whitelist' => false,
+                'blacklist' => [
+                    0 => '/error',
+                    1 => '/random'
                 ]
-            ],
-            'problems' => [
-                'enabled' => true,
-                'built_in_css' => true
             ],
             'ampimage' => [
                 'enabled' => true,
@@ -277,10 +240,51 @@ return [
             'devtools' => [
                 'enabled' => true
             ],
+            'email' => [
+                'enabled' => true,
+                'from' => 'menos5@gmail.com',
+                'from_name' => 'TC 2018',
+                'to' => 'menos5@gmail.com',
+                'to_name' => NULL,
+                'mailer' => [
+                    'engine' => 'smtp',
+                    'smtp' => [
+                        'server' => 'smtp.gmail.com',
+                        'port' => 465,
+                        'encryption' => 'ssl',
+                        'user' => 'menos5@gmail.com',
+                        'password' => 'Cri55tina'
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail -bs'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => false
+            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
                     404 => '/404'
+                ]
+            ],
+            'form' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'inline_css' => true,
+                'refresh_prevention' => false,
+                'client_side_validation' => true,
+                'inline_errors' => false,
+                'files' => [
+                    'multiple' => false,
+                    'limit' => 10,
+                    'destination' => 'self@',
+                    'avoid_overwriting' => false,
+                    'random_name' => false,
+                    'filesize' => 0,
+                    'accept' => [
+                        0 => 'image/*'
+                    ]
                 ]
             ],
             'login' => [
@@ -337,27 +341,23 @@ return [
                     ]
                 ]
             ],
-            'email' => [
+            'pagination' => [
                 'enabled' => true,
-                'from' => 'menos5@gmail.com',
-                'from_name' => 'TC 2018',
-                'to' => 'menos5@gmail.com',
-                'to_name' => NULL,
-                'mailer' => [
-                    'engine' => 'smtp',
-                    'smtp' => [
-                        'server' => 'smtp.gmail.com',
-                        'port' => 465,
-                        'encryption' => 'ssl',
-                        'user' => 'menos5@gmail.com',
-                        'password' => 'Cri55tina'
-                    ],
-                    'sendmail' => [
-                        'bin' => '/usr/sbin/sendmail -bs'
-                    ]
-                ],
-                'content_type' => 'text/html',
-                'debug' => false
+                'built_in_css' => false,
+                'delta' => 0
+            ],
+            'problems' => [
+                'enabled' => true,
+                'built_in_css' => true
+            ],
+            'sitemap' => [
+                'enabled' => true,
+                'route' => '/sitemap',
+                'changefreq' => 'daily',
+                'priority' => 1,
+                'ignores' => [
+                    0 => '/404'
+                ]
             ],
             'autoseo' => [
                 'enabled' => false,
