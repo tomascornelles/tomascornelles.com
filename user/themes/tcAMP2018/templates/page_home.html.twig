@@ -14,7 +14,7 @@
   </div>
   <section class="works">
     <div class="container-i">
-        {% for page in page.find('/porfolio').children.order('date', 'desc').slice(0, 12) %}
+        {% for page in page.find('/porfolio').children.order('date', 'desc').slice(0, 8) %}
           {% include 'partials/work_item.html.twig' with {'page':page, 'truncate':true} %}
         {% endfor %}
     </div>

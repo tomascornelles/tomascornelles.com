@@ -8,16 +8,16 @@ taxonomy:
     type:
         - 'Desarrollo Web'
     tech:
-        - PHP
         - CSS
         - JS
+        - PHP
     client:
         - Personal
     year:
         - '2018'
 ---
 
-En 2018 empecé jugando con un nuevo logo para mi amrca personal, a modo de ejercicio, para aprender y disfrutar del proceso. Ese ejercició acabó en un rebranding completo de mi mismo, **nuevo logo**, **nueva web** y **nuevas tecnologías**.
+En 2018 empecé jugando con un nuevo logo para mi marca personal, a modo de ejercicio, para aprender y disfrutar del proceso. Ese ejercició acabó en un rebranding completo de mi mismo, **nuevo logo**, **nueva web** y **nuevas tecnologías**.
 
 En la web anterior usé **Pico CMS** como gestor, y **Markdown** para los contenidos. En esta ocasión busqué una alternaiva más avanzada, pero con los mismo principios. Por ello escogí **Grav CMS**, que ofrece la misma base que _Pico_ además de ser más extensible, con más documentación y un panel de administrador completo.
 

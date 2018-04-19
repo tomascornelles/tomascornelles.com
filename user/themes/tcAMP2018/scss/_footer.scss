@@ -15,25 +15,32 @@ footer {
     float: left;
     font-size: 1.5em;
     line-height: 3rem;
+    a {
+      color: $cNegro;
+      text-decoration: underline;
+      display: inline-block;
+      padding: 0 1em;
+    }
   }
   .right {
     float: right;
     line-height: 3rem;
-  }
-  a {
-    font-size: 2em;
-    display: inline-block;
-    padding: 0.3em;
-    overflow: hidden;
-    width: 1em;
-    color: transparent;
-
-    span {
-      color: $cNegro;
-    }
-
-    &:hover {
+    
+    a {
+      font-size: 2em;
+      display: inline-block;
+      padding: 0.3em;
+      overflow: hidden;
+      width: 1em;
       color: transparent;
+
+      span {
+        color: $cNegro;
+      }
+
+      &:hover {
+        color: transparent;
+      }
     }
   }
 }

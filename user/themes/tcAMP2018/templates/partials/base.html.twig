@@ -20,6 +20,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
     
     {% if page.slug == 'home' or page.slug == 'contacto' %}
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
@@ -68,12 +69,25 @@
 
     <footer>
       <div class="container-i">
-        <div class="left">&copy; 2018 Tomás Cornelles</div>
+        <div class="left">&copy; 2018 Tomás Cornelles
+          <a href="{{base_url}}/politica-de-cookies">Política de cookies</a>
+          <a href="{{base_url}}/politica-de-privacidad">Política de privacidad</a>
+        </div>
         <div class="right"><a href="https://twitter.com/tomascornelles"><span class="tc-twitter"></span>Twitter</a>
           <a href="https://www.linkedin.com/in/tomascornelles"><span class="tc-linkedin"></span>Linkedin</a></div>
       </div>
     </footer>
-    
+    <amp-user-notification id="my-notification"
+      layout="nodisplay">
+      <div class="container-i"><div>
+        <p>
+          Tengo que decir que este sitio usa cookies, ya sabes, las de siempre. <a href="{{base_url}}/politica-de-cookies">Ver la política de cookies</a>
+        </p>
+          <button on="tap:my-notification.dismiss"
+            class="button">De acuerdo</button>
+      </div>
+      </div>
+    </amp-user-notification>
     <amp-analytics type="googleanalytics" id="analytics1">
     <script type="application/json">
     {
