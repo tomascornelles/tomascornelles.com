@@ -36,7 +36,7 @@ define('LIB_DIR', SYSTEM_DIR .'src/');
 define('PLUGINS_DIR', USER_DIR .'plugins/');
 define('THEMES_DIR', USER_DIR .'themes/');
 define('VENDOR_DIR', ROOT_DIR .'vendor/');
-define('LOG_DIR', ROOT_DIR .'logs/');
+define('LOG_DIR', ROOT_DIR .'_logs/');
 // END DEPRECATED
 
 // Some extensions

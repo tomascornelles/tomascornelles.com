@@ -9,7 +9,7 @@ RewriteEngine On
 # along the lines of: RewriteBase /<your_sub_folder>
 ##
 
-# RewriteBase /
+RewriteBase /
 
 ## End - RewriteBase
 
@@ -73,6 +73,9 @@ RewriteRule ^(LICENSE\.txt|composer\.lock|composer\.json|\.htaccess)$ error [F]
 Options -Indexes
 DirectoryIndex index.php index.html index.htm
 # End - Prevent Browsing and Set Default Resources
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirecciones
 Redirect 301 /blog/2014-11-25-se-puede-ser-desarrollador-con-un-chromebook /blog/se-puede-ser-desarrollador-con-un-chromebook
